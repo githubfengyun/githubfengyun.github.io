@@ -461,6 +461,11 @@ body {
   padding: 5px 10px;
   text-shadow: 1px 1px 4px rgba(0,0,0,0.4), 0px 1px 10px rgba(0,0,0,0.1), 0px 6px 15px rgba(0,0,0,0.1);
 }
+#blog-sub-title {
+  color: #fff;
+  font-size: 1em;
+  text-indent: 2em;
+}
 #main-nav {
   font-size: 0;
   position: absolute;
