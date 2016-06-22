@@ -5,17 +5,21 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>齐天大圣</title>
+  <title>Javascript Object Copy | 齐天大圣</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="齐天大圣">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="Prerequisite: Understanding objects assignment in JavascriptAs you know, the assignment does not copy an object, it only assign a reference to it, therefore the following code:
+1234var object = &amp;#123;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Javascript Object Copy">
+<meta property="og:url" content="http://yoursite.com/2016/06/22/Javascript-Object-Copy/index.html">
 <meta property="og:site_name" content="齐天大圣">
-<meta property="og:description">
+<meta property="og:description" content="Prerequisite: Understanding objects assignment in JavascriptAs you know, the assignment does not copy an object, it only assign a reference to it, therefore the following code:
+1234var object = &amp;#123;">
+<meta property="og:updated_time" content="2016-06-22T10:41:07.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="齐天大圣">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Javascript Object Copy">
+<meta name="twitter:description" content="Prerequisite: Understanding objects assignment in JavascriptAs you know, the assignment does not copy an object, it only assign a reference to it, therefore the following code:
+1234var object = &amp;#123;">
   
     <link rel="alternative" href="/atom.xml" title="齐天大圣" type="application/atom+xml">
   
@@ -86,9 +90,7 @@
 </header>
 
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-Javascript-Object-Copy" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Javascript-Object-Copy" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2016/06/22/Javascript-Object-Copy/" class="article-date">
   <time datetime="2016-06-22T09:21:07.000Z" itemprop="datePublished">2016-06-22</time>
@@ -103,8 +105,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/22/Javascript-Object-Copy/">Javascript Object Copy</a>
+    <h1 class="article-title" itemprop="name">
+      Javascript Object Copy
     </h1>
   
 
@@ -136,65 +138,21 @@
   </div>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/05/29/hello-world/" class="article-date">
-  <time datetime="2016-05-29T09:48:30.000Z" itemprop="datePublished">2016-05-29</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/29/hello-world/">Hello World</a>
-    </h1>
+    <a href="/2016/05/29/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="http://yoursite.com/2016/05/29/hello-world/" data-id="cipqqzrfo0002iprggr6nbhz3" class="article-share-link">Share</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
   
 </article>
 
 
-
-  
-  
 </section>
       
       <aside id="sidebar">
