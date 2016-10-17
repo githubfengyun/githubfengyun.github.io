@@ -5,17 +5,24 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   
-  <title>齐天大圣</title>
+  <title>Jenkins(基本篇)  - web前端项目自动化部署实例(基于linux系统) | 齐天大圣</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
-<meta property="og:type" content="website">
-<meta property="og:title" content="齐天大圣">
-<meta property="og:url" content="http://yoursite.com/index.html">
+  <meta name="description" content="部署的步骤
+新建一个项目(类型为自由风格).
+配置源码管理(现在主流的源码管理已经从SVN转到GIT, 所以本文介绍GIT配置方式)a. 配置有两种方式,一种为https, 一种为ssh. 我们这里使用ssh方式.  在仓库url: git@github.xxx.com:GPMO/portal.git(请根据实际的服务器参考地址填写)  这个时候一般会遇到ssh认证失败的问题. 这时通过以下步骤解">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jenkins(基本篇)  - web前端项目自动化部署实例(基于linux系统)">
+<meta property="og:url" content="http://yoursite.com/2016/10/16/Jenkins-Configurations-for-Front-End-Project/index.html">
 <meta property="og:site_name" content="齐天大圣">
-<meta property="og:description">
+<meta property="og:description" content="部署的步骤
+新建一个项目(类型为自由风格).
+配置源码管理(现在主流的源码管理已经从SVN转到GIT, 所以本文介绍GIT配置方式)a. 配置有两种方式,一种为https, 一种为ssh. 我们这里使用ssh方式.  在仓库url: git@github.xxx.com:GPMO/portal.git(请根据实际的服务器参考地址填写)  这个时候一般会遇到ssh认证失败的问题. 这时通过以下步骤解">
+<meta property="og:updated_time" content="2016-10-17T12:32:03.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="齐天大圣">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Jenkins(基本篇)  - web前端项目自动化部署实例(基于linux系统)">
+<meta name="twitter:description" content="部署的步骤
+新建一个项目(类型为自由风格).
+配置源码管理(现在主流的源码管理已经从SVN转到GIT, 所以本文介绍GIT配置方式)a. 配置有两种方式,一种为https, 一种为ssh. 我们这里使用ssh方式.  在仓库url: git@github.xxx.com:GPMO/portal.git(请根据实际的服务器参考地址填写)  这个时候一般会遇到ssh认证失败的问题. 这时通过以下步骤解">
   
     <link rel="alternative" href="/atom.xml" title="齐天大圣" type="application/atom+xml">
   
@@ -86,9 +93,7 @@
 </header>
 
     <div class="outer">
-      <section id="main">
-  
-    <article id="post-Jenkins-Configurations-for-Front-End-Project" class="article article-type-post" itemscope itemprop="blogPost">
+      <section id="main"><article id="post-Jenkins-Configurations-for-Front-End-Project" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <h3 href="/2016/10/16/Jenkins-Configurations-for-Front-End-Project/" class="article-date">
   <time datetime="2016-10-16T12:26:45.000Z" itemprop="datePublished">2016-10-16</time>
@@ -103,8 +108,8 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/10/16/Jenkins-Configurations-for-Front-End-Project/">Jenkins(基本篇)  - web前端项目自动化部署实例(基于linux系统)</a>
+    <h1 class="article-title" itemprop="name">
+      Jenkins(基本篇)  - web前端项目自动化部署实例(基于linux系统)
     </h1>
   
 
@@ -153,118 +158,21 @@
   </div>
   </div>
   
-</article>
-
-
-
+    
+<nav id="article-nav">
   
-    <article id="post-Javascript-Object-Copy" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/06/22/Javascript-Object-Copy/" class="article-date">
-  <time datetime="2016-06-22T09:21:07.000Z" itemprop="datePublished">2016-06-22</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/06/22/Javascript-Object-Copy/">Javascript Object Copy</a>
-    </h1>
+    <a href="/2016/06/22/Javascript-Object-Copy/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">上一篇</strong>
+      <div class="article-nav-title">Javascript Object Copy</div>
+    </a>
   
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <h2 id="Prerequisite-Understanding-objects-assignment-in-Javascript"><a href="#Prerequisite-Understanding-objects-assignment-in-Javascript" class="headerlink" title="Prerequisite: Understanding objects assignment in Javascript"></a>Prerequisite: Understanding objects assignment in Javascript</h2><p>As you know, the assignment does not copy an object, it only assign a reference to it, therefore the following code:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var object = &#123; a: 1, b: 2 &#125; ;  </span><br><span class="line">var copy = object ;  </span><br><span class="line">object.a = 3 ;  </span><br><span class="line">console.log( copy.a ) ;</span><br></pre></td></tr></table></figure>
-<p>… will output 3 rather than 1.</p>
-<p>The two variables object &amp; copy reference the same object, so whatever the variable used to modify it, you will get the same result.</p>
-<h2 id="How-to-perform-a-deep-copy-of-an-object-in-Javascript"><a href="#How-to-perform-a-deep-copy-of-an-object-in-Javascript" class="headerlink" title="How to perform a deep copy of an object in Javascript"></a>How to perform a deep copy of an object in Javascript</h2><h3 id="Resolution-1"><a href="#Resolution-1" class="headerlink" title="Resolution 1:"></a>Resolution 1:</h3><p>A variant using Object.keys() can be used if we want to copy only owned and enumerable properties:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">function cloneObject(obj) &#123;</span><br><span class="line">    if (obj === null || typeof obj !== &apos;object&apos;) &#123;</span><br><span class="line">        return obj;</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    var temp = obj.constructor(); // give temp the original obj&apos;s constructor</span><br><span class="line">    for (var key in obj) &#123;</span><br><span class="line">        temp[key] = cloneObject(obj[key]);</span><br><span class="line">    &#125;</span><br><span class="line"> </span><br><span class="line">    return temp;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="Resolution-2-if-it-is-the-json-object"><a href="#Resolution-2-if-it-is-the-json-object" class="headerlink" title="Resolution 2: if it is the json object."></a>Resolution 2: if it is the json object.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var originalObj = &#123;</span><br><span class="line">    name: &quot;Bob&quot;,</span><br><span class="line">    age: 32,</span><br><span class="line">    address:&#123;</span><br><span class="line">    	city: &quot;CQ&quot;&quot;,</span><br><span class="line">    	Road: &quot;JinShan&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line">var targetObj = JSON.parse(JSON.stringify(originalObj))</span><br></pre></td></tr></table></figure>
-<h3 id="Resolution-3-Using-jQuery’s-extend"><a href="#Resolution-3-Using-jQuery’s-extend" class="headerlink" title="Resolution 3: Using jQuery’s $.extend()"></a>Resolution 3: Using jQuery’s <a href="http://api.jquery.com/jQuery.extend/" target="_blank" rel="external">$.extend()</a></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var originalObj = &#123;</span><br><span class="line">    name: &quot;Bob&quot;,</span><br><span class="line">    age: 32,</span><br><span class="line">    address:&#123;</span><br><span class="line">    	city: &quot;CQ&quot;&quot;,</span><br><span class="line">    	Road: &quot;JinShan&quot;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"> </span><br><span class="line">var targetObj = $.extend(true, &#123;&#125;, originalObj);</span><br></pre></td></tr></table></figure>
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Javascript/">Javascript</a></li></ul>
-
-        <a data-url="http://yoursite.com/2016/06/22/Javascript-Object-Copy/" data-id="ciue1k6p10002ycrgjkszj3s0" class="article-share-link">分享到</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
   
 </article>
 
 
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <h3 href="/2016/05/29/hello-world/" class="article-date">
-  <time datetime="2016-05-29T09:48:30.000Z" itemprop="datePublished">2016-05-29</time>
-</h3>
-    
-  </div>
-  <div class="article-inner">
-  <div class="curve-down">
-  <div class="fill-content">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/05/29/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <div class="article-footer-content">
-        
-        <a data-url="http://yoursite.com/2016/05/29/hello-world/" data-id="ciue1k6pl0004ycrgav73o1vi" class="article-share-link">分享到</a>
-        
-      </div>
-    </footer>
-  </div>
-  </div>
-  </div>
-  
-</article>
-
-
-
-  
-  
 </section>
       
       <aside id="sidebar">
